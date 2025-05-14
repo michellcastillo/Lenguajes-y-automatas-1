@@ -1,0 +1,69 @@
+Instituto tecnológico superior progreso
+
+Carrera: Ingeniería en sistemas computacionales
+Asignatura: Lenguajes y autómatas 1
+Semestre: 6TO Semestre
+Docente: Holzen Atocha Martínez Garcia
+
+Alumna: Karina Michell Franco Tello
+
+
+Objetivo: Es un analizador, que lee, interpretación y validación de codigo fuente escrito en un lenguaje determinado, este se divide en tokens, asegurando que siga una estructura valida. Específicamente reconoce la estructura del lenguaje, valida la sintaxis del codigo fuente, preparar para la ejecución o traducción, facilita el aprendizaje de copiladores e interpretes y detecta errores tempranos.
+
+Instrucciones:
+* Primero se necesita contar el lenguaje de programación de Python y las librerías de PLY.
+* Se guarda el codigo en un archivo .py.
+* Abre la terminal y ejecuta el script con Python.
+* Es importante que antes de ejecutar verifiques que el elemento que se encuentra en data es aquel que se desea analizar.
+
+El programa escanea línea por línea de texto de ejemplo en data, aplica el análisis léxico, aplica el análisis sintáctico e imprime los tokens clasificando cada elemento. 
+
+Ejemplos: 
+1.
+data: '''
+import os
+
+if os.path.exists("<ubicación_del_archivo>"):
+  os.remove("<ubicación_del_archivo>")
+else:
+  <código>
+'''
+
+1.1
+LexToken(IDENTIFICADOR,'import',1,1)
+LexToken(IDENTIFICADOR,'os',1,8)
+LexToken(IF,'if',1,12)
+LexToken(IDENTIFICADOR,'os',1,15)
+LexToken(PUNTO,'.',1,17)
+LexToken(IDENTIFICADOR,'path',1,18)
+LexToken(PUNTO,'.',1,22)
+LexToken(IDENTIFICADOR,'exists',1,23)
+LexToken(PARENTESIS_IZQ,'(',1,29)
+Carácter ilegal '"' en la línea 1
+Carácter ilegal '<' en la línea 1
+LexToken(IDENTIFICADOR,'ubicaci',1,32)
+Carácter ilegal 'ó' en la línea 1
+LexToken(IDENTIFICADOR,'n_del_archivo',1,40)
+Carácter ilegal '>' en la línea 1
+Carácter ilegal '"' en la línea 1
+LexToken(PARENTESIS_DER,')',1,55)
+LexToken(DOS_PUNTOS,':',1,56)
+LexToken(IDENTIFICADOR,'os',1,60)
+LexToken(PUNTO,'.',1,62)
+LexToken(IDENTIFICADOR,'remove',1,63)
+LexToken(PARENTESIS_IZQ,'(',1,69)
+Carácter ilegal '"' en la línea 1
+Carácter ilegal '<' en la línea 1
+LexToken(IDENTIFICADOR,'ubicaci',1,72)
+Carácter ilegal 'ó' en la línea 1
+LexToken(IDENTIFICADOR,'n_del_archivo',1,80)
+Carácter ilegal '>' en la línea 1
+Carácter ilegal '"' en la línea 1
+LexToken(PARENTESIS_DER,')',1,95)
+LexToken(ELSE,'else',1,97)
+LexToken(DOS_PUNTOS,':',1,101)
+Carácter ilegal '<' en la línea 1
+LexToken(IDENTIFICADOR,'c',1,106)
+Carácter ilegal 'ó' en la línea 1
+LexToken(IDENTIFICADOR,'digo',1,108)
+Carácter ilegal '>' en la línea 1
